@@ -1,0 +1,12 @@
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\bin\Debug\net8.0\PontosTuristicos.Infrastructure.deps.json
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\bin\Debug\net8.0\PontosTuristicos.Infrastructure.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\bin\Debug\net8.0\PontosTuristicos.Infrastructure.pdb
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\obj\Debug\net8.0\PontosTuristicos.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\obj\Debug\net8.0\PontosTuristicos.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\obj\Debug\net8.0\PontosTuristicos.Infrastructure.AssemblyInfo.cs
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\obj\Debug\net8.0\PontosTuristicos.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\obj\Debug\net8.0\PontosTuristicos.Infrastructure.sourcelink.json
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\obj\Debug\net8.0\PontosTuristicos.Infrastructure.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\obj\Debug\net8.0\refint\PontosTuristicos.Infrastructure.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\obj\Debug\net8.0\PontosTuristicos.Infrastructure.pdb
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Infrastructure\obj\Debug\net8.0\ref\PontosTuristicos.Infrastructure.dll

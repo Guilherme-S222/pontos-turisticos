@@ -1,0 +1,12 @@
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\bin\Debug\net8.0\PontosTuristicos.Exception.deps.json
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\bin\Debug\net8.0\PontosTuristicos.Exception.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\bin\Debug\net8.0\PontosTuristicos.Exception.pdb
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\PontosTuristicos.Exception.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\PontosTuristicos.Exception.AssemblyInfoInputs.cache
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\PontosTuristicos.Exception.AssemblyInfo.cs
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\PontosTuristicos.Exception.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\PontosTuristicos.Exception.sourcelink.json
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\PontosTuristicos.Exception.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\refint\PontosTuristicos.Exception.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\PontosTuristicos.Exception.pdb
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\ref\PontosTuristicos.Exception.dll

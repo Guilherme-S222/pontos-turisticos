@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontosTuristicos.Api", "PontosTuristicos.Api.csproj", "{D11533C3-72DB-4E2B-BBCB-4B0354A96707}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3A1B6EB9-EDE7-48BB-923D-085B3CD36823}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontosTuristicos.Application", "..\PontosTuristicos.Application\PontosTuristicos.Application.csproj", "{0E48515E-AB75-4A3C-AADE-2BA508D33039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontosTuristicos.Communication", "..\PontosTuristicos.Communication\PontosTuristicos.Communication.csproj", "{D245B56D-E70D-44E3-975C-FB5167BD8AD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontosTuristicos.Exception", "..\PontosTuristicos.Exception\PontosTuristicos.Exception.csproj", "{97C6DAFF-85B5-4E55-91A3-170F4538081C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontosTuristicos.Infrastructure", "..\PontosTuristicos.Infrastructure\PontosTuristicos.Infrastructure.csproj", "{D65BF0F7-B5B3-42E0-84BA-8F84F0869044}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D11533C3-72DB-4E2B-BBCB-4B0354A96707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11533C3-72DB-4E2B-BBCB-4B0354A96707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11533C3-72DB-4E2B-BBCB-4B0354A96707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11533C3-72DB-4E2B-BBCB-4B0354A96707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E48515E-AB75-4A3C-AADE-2BA508D33039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E48515E-AB75-4A3C-AADE-2BA508D33039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E48515E-AB75-4A3C-AADE-2BA508D33039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E48515E-AB75-4A3C-AADE-2BA508D33039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D245B56D-E70D-44E3-975C-FB5167BD8AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D245B56D-E70D-44E3-975C-FB5167BD8AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D245B56D-E70D-44E3-975C-FB5167BD8AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D245B56D-E70D-44E3-975C-FB5167BD8AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C6DAFF-85B5-4E55-91A3-170F4538081C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C6DAFF-85B5-4E55-91A3-170F4538081C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C6DAFF-85B5-4E55-91A3-170F4538081C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C6DAFF-85B5-4E55-91A3-170F4538081C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D65BF0F7-B5B3-42E0-84BA-8F84F0869044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D65BF0F7-B5B3-42E0-84BA-8F84F0869044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D65BF0F7-B5B3-42E0-84BA-8F84F0869044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D65BF0F7-B5B3-42E0-84BA-8F84F0869044}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D11533C3-72DB-4E2B-BBCB-4B0354A96707} = {3A1B6EB9-EDE7-48BB-923D-085B3CD36823}
+		{0E48515E-AB75-4A3C-AADE-2BA508D33039} = {3A1B6EB9-EDE7-48BB-923D-085B3CD36823}
+		{D245B56D-E70D-44E3-975C-FB5167BD8AD5} = {3A1B6EB9-EDE7-48BB-923D-085B3CD36823}
+		{97C6DAFF-85B5-4E55-91A3-170F4538081C} = {3A1B6EB9-EDE7-48BB-923D-085B3CD36823}
+		{D65BF0F7-B5B3-42E0-84BA-8F84F0869044} = {3A1B6EB9-EDE7-48BB-923D-085B3CD36823}
+	EndGlobalSection
+EndGlobal

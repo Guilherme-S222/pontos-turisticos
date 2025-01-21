@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PontosTuristicos.Api.props" />
+</Project>

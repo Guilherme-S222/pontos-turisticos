@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PontosTuristicos.Application/1.0.0": {
+        "dependencies": {
+          "PontosTuristicos.Communication": "1.0.0",
+          "PontosTuristicos.Exception": "1.0.0"
+        },
+        "runtime": {
+          "PontosTuristicos.Application.dll": {}
+        }
+      },
+      "PontosTuristicos.Communication/1.0.0": {
+        "runtime": {
+          "PontosTuristicos.Communication.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PontosTuristicos.Exception/1.0.0": {
+        "runtime": {
+          "PontosTuristicos.Exception.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PontosTuristicos.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PontosTuristicos.Communication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PontosTuristicos.Exception/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
