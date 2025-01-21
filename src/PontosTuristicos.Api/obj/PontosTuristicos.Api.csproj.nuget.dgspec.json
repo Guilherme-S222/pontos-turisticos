@@ -142,6 +142,9 @@
               },
               "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Exception\\PontosTuristicos.Exception.csproj": {
                 "projectPath": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Exception\\PontosTuristicos.Exception.csproj"
+              },
+              "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Infrastructure\\PontosTuristicos.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Infrastructure\\PontosTuristicos.Infrastructure.csproj"
               }
             }
           }
@@ -398,6 +401,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

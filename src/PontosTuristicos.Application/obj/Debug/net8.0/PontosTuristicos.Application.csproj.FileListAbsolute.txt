@@ -16,3 +16,5 @@ C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Application\ob
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Application\obj\Debug\net8.0\refint\PontosTuristicos.Application.dll
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Application\obj\Debug\net8.0\PontosTuristicos.Application.pdb
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Application\obj\Debug\net8.0\ref\PontosTuristicos.Application.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Application\bin\Debug\net8.0\PontosTuristicos.Infrastructure.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Application\bin\Debug\net8.0\PontosTuristicos.Infrastructure.pdb

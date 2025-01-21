@@ -9,6 +9,12 @@
   <ItemGroup>
     <ProjectReference Include="..\PontosTuristicos.Communication\PontosTuristicos.Communication.csproj" />
     <ProjectReference Include="..\PontosTuristicos.Exception\PontosTuristicos.Exception.csproj" />
+    <ProjectReference Include="..\PontosTuristicos.Infrastructure\PontosTuristicos.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UseCases\PontosTuristicos\GetById\" />
+    <Folder Include="UseCases\PontosTuristicos\GetBySearch\" />
   </ItemGroup>
 
 </Project>

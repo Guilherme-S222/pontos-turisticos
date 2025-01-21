@@ -14,5 +14,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pontos_turisticos.Controllers.PontosController",
+    "Method": "GetAll",
+    "RelativePath": "api/Pontos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

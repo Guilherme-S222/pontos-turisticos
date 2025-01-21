@@ -34,6 +34,16 @@
             "description": "OK"
           }
         }
+      },
+      "get": {
+        "tags": [
+          "Pontos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   },

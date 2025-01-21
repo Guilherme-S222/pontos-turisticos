@@ -10,3 +10,5 @@ C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\refint\PontosTuristicos.Exception.dll
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\PontosTuristicos.Exception.pdb
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\ref\PontosTuristicos.Exception.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\PontosTuristicos.Exception.ResourceErrorMessages.resources
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Exception\obj\Debug\net8.0\PontosTuristicos.Exception.csproj.GenerateResource.cache
