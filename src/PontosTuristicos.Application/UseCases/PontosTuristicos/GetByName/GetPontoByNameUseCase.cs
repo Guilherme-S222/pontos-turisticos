@@ -14,7 +14,10 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.GetByName
 
             var pontos = dbContext
                          .Pontos
-                         .Where(ponto => EF.Functions.Like(ponto.Name.ToLower(), $"%{name.ToLower()}%"))
+                         .Where(ponto => EF.Functions.Like(ponto.Name.ToLower(), $"%{name.ToLower()}%") ||
+                                         EF.Functions.Like(ponto.Description.ToLower(), $"%{name.ToLower()}%") ||
+                                         EF.Functions.Like(ponto.Location.ToLower(), $"%{name.ToLower()}%") ||
+                                         EF.Functions.Like(ponto.City.ToLower(), $"%{name.ToLower()}%"))
                          .ToList();
 
             if (!pontos.Any()) 
