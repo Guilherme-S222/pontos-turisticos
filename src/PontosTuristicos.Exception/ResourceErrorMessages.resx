@@ -129,6 +129,9 @@
   <data name="NAME_EMPTY" xml:space="preserve">
     <value>The name cannot be empty</value>
   </data>
+  <data name="TOURIST_SPOT_NOT_FOUND" xml:space="preserve">
+    <value>The tourist spot was not found</value>
+  </data>
   <data name="STATE_EMPTY" xml:space="preserve">
     <value>The state cannot be empty</value>
   </data>

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AwAMYZIKG7E=",
+  "dgSpecHash": "W7SFXQLtSeo=",
   "success": true,
   "projectFilePath": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\PontosTuristicos.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Guilherme\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
     "C:\\Users\\Guilherme\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.1\\microsoft.data.sqlite.core.9.0.1.nupkg.sha512",
     "C:\\Users\\Guilherme\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.1\\microsoft.entityframeworkcore.9.0.1.nupkg.sha512",
     "C:\\Users\\Guilherme\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.1\\microsoft.entityframeworkcore.abstractions.9.0.1.nupkg.sha512",

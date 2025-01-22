@@ -106,6 +106,15 @@ namespace PontosTuristicos.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The tourist spot was not found.
+        /// </summary>
+        public static string TOURIST_SPOT_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("TOURIST_SPOT_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unknown error.
         /// </summary>
         public static string UNKNOWN_ERROR {

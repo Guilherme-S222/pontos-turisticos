@@ -39,24 +39,15 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.Register
 
         private void Validate(RequestRegisterPontoJson request)
         {
-            if(string.IsNullOrWhiteSpace(request.Name))
-            {
-                throw new PontosException(ResourceErrorMessages.NAME_EMPTY);
-            }       
+            var validator = new RegisterPontoValidator();
 
-            if (string.IsNullOrWhiteSpace(request.Location))
-            {
-                throw new PontosException(ResourceErrorMessages.LOCATION_EMPTY);
-            }
+            var result = validator.Validate(request);
 
-            if (string.IsNullOrWhiteSpace(request.City))
+            if(result.IsValid == false)
             {
-                throw new PontosException(ResourceErrorMessages.CITY_EMPTY);
-            }
+                var errorMessages = result.Errors.Select(error => error.ErrorMessage).ToList();
 
-            if (string.IsNullOrWhiteSpace(request.State))
-            {
-                throw new PontosException(ResourceErrorMessages.STATE_EMPTY);
+                throw new ErrorOnValidationException(errorMessages);
             }
         }
     }
