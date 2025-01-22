@@ -24,7 +24,7 @@
         "StatusCode": 201
       },
       {
-        "Type": "System.String",
+        "Type": "PontosTuristicos.Communication.Responses.ResponseErrorsJson",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -79,7 +79,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "System.String",
+        "Type": "PontosTuristicos.Communication.Responses.ResponseErrorsJson",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -110,7 +110,42 @@
         "StatusCode": 204
       },
       {
+        "Type": "PontosTuristicos.Communication.Responses.ResponseErrorsJson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "pontos_turisticos.Controllers.PontosController",
+    "Method": "GetByName",
+    "RelativePath": "api/Pontos/{name}/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PontosTuristicos.Communication.Responses.ResponsePontoJson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "PontosTuristicos.Communication.Responses.ResponseErrorsJson",
         "MediaTypes": [
           "text/plain",
           "application/json",

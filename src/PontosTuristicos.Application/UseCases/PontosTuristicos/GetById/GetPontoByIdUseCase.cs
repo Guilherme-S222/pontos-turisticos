@@ -25,7 +25,9 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.GetById
                 Description = ponto.Description,
                 Location = ponto.Location,
                 City = ponto.City,
-                State = ponto.State
+                State = ponto.State,
+                CreatedAt = ponto.CreatedAt,
+
             };
         }
     }

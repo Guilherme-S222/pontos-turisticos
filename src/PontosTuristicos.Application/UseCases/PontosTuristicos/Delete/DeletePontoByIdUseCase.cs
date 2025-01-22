@@ -1,6 +1,5 @@
-﻿using PontosTuristicos.Communication.Responses;
+﻿using PontosTuristicos.Exception;
 using PontosTuristicos.Exception.ExceptionsBase;
-using PontosTuristicos.Exception;
 using PontosTuristicos.Infrastructure;
 
 namespace PontosTuristicos.Application.UseCases.PontosTuristicos.Delete

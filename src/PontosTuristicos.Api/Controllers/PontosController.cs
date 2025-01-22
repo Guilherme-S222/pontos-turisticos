@@ -2,6 +2,7 @@
 using PontosTuristicos.Application.UseCases.PontosTuristicos.Delete;
 using PontosTuristicos.Application.UseCases.PontosTuristicos.GetAll;
 using PontosTuristicos.Application.UseCases.PontosTuristicos.GetById;
+using PontosTuristicos.Application.UseCases.PontosTuristicos.GetByName;
 using PontosTuristicos.Application.UseCases.PontosTuristicos.Register;
 using PontosTuristicos.Communication.Requests;
 using PontosTuristicos.Communication.Responses;
@@ -14,7 +15,7 @@ namespace pontos_turisticos.Controllers
     {
         [HttpPost]
         [ProducesResponseType(typeof(ResponseShortPontoJson), StatusCodes.Status201Created)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status400BadRequest)]
         public IActionResult Register([FromBody] RequestRegisterPontoJson request)
         {
             var useCase = new RegisterPontoUseCase();
@@ -38,7 +39,7 @@ namespace pontos_turisticos.Controllers
         [HttpGet]
         [Route("{id}")]
         [ProducesResponseType(typeof(ResponsePontoJson), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
         public IActionResult GetById([FromRoute] Guid id)
         {
             var useCase = new GetPontoByIdUseCase();
@@ -48,10 +49,23 @@ namespace pontos_turisticos.Controllers
             return Ok(response);
         }
 
+        [HttpGet]
+        [Route("{name}/search")]
+        [ProducesResponseType(typeof(ResponsePontoJson), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
+        public IActionResult GetByName([FromRoute] string name)
+        {
+            var useCase = new GetPontoByNameUseCase();
+
+            var response = useCase.Execute(name);
+
+            return Ok(response);
+        }
+
         [HttpDelete]
         [Route("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
         public IActionResult Delete([FromRoute] Guid id)
         {
             var useCase = new DeletePontoByIdUseCase();

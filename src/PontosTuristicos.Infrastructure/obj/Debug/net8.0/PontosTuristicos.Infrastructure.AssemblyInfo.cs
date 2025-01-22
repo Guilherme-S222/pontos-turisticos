@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PontosTuristicos.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38d431f2116113d9cdf21db2bac9e9dbbd3aecff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6d4f57cc821d2895c631a2084764598ae355bbe")]
 [assembly: System.Reflection.AssemblyProductAttribute("PontosTuristicos.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PontosTuristicos.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

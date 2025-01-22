@@ -22,6 +22,7 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.Register
                 Location = request.Location,
                 City = request.City,
                 State = request.State,
+                CreatedAt = DateTime.UtcNow
             };
 
             dbContext.Pontos.Add(entity);
@@ -34,6 +35,7 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.Register
                 Name = entity.Name,
                 Description = entity.Description,
                 Location = entity.Location,
+                CreatedAt = entity.CreatedAt,
             };
         }
 

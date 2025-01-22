@@ -21,6 +21,7 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.GetAll
                     Location = ponto.Location,
                     City = ponto.City,
                     State = ponto.State,
+                    CreatedAt = ponto.CreatedAt,
                 }).ToList(),
             };
         }
