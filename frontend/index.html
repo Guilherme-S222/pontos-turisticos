@@ -12,6 +12,7 @@
     <script src="src/index.js"></script>
 </head>
 <body>
+
     <!-- Header -->
     <header>
         <div class="header-content">
@@ -24,8 +25,9 @@
             </nav>
         </div>
     </header>
+    <!--  -->
 
-    <!-- Hero Section -->
+    <!-- Section Painel Principal -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Descubra Lugares Incríveis</h1>
@@ -33,18 +35,25 @@
             <button class="btn btn-primary" onclick="scrollToSearch()">Começar a Explorar</button>
         </div>
     </section>
+    <!--  -->
 
     <!-- Carrosel com BootStrap -->
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="img/ken-cheung-CD4Bpfzj5ro-unsplash.jpg" class="d-block w-100" alt="imagem1">
+            <img src="img/samuel-costa-melo-RJz9Xmro1Fc-unsplash.jpg" class="d-block w-100" alt="imagem1">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="img/nir-himi-jx4a7HX4foQ-unsplash.jpg" class="d-block w-100" alt="imagem2">
+            <img src="img/renan-TvCRYXwKhfQ-unsplash.jpg" class="d-block w-100" alt="imagem2">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="img/slava-auchynnikau-vK8LPiJnsOU-unsplash.jpg" class="d-block w-100" alt="imagem3">
+            <img src="img/derek-oyen-lYv3hXpFdeY-unsplash.jpg" class="d-block w-100" alt="imagem3">
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="img/krys-amon-BVj6AnXs3TA-unsplash.jpg" class="d-block w-100" alt="imagem4">
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="img/renan-gnqC-bSAa8Q-unsplash.jpg" class="d-block w-100" alt="imagem4">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -58,7 +67,7 @@
     </div>
     <!--  -->
 
-    <!-- Search Section -->
+    <!-- Section Search -->
     <section class="search-section" id="search">
         <div class="search-container">
             <div class="search-box">
@@ -67,79 +76,84 @@
             </div>
         </div>
     </section>
+    <!--  -->
 
-    <!-- Results Section -->
+    <!-- Section de busca Principal -->
     <section class="results-section" id="results">
         <div class="spot-grid" id="spotsGrid">
-            <!-- Spots will be dynamically added here -->
+            <!-- Os pontos turisticos serão adicionados dinâmicamente aqui -->
         </div>
         <div class="no-results" id="noResults" style="display: none;">
             Não encontrei nenhum resultado para a sua busca :(
         </div>
         <div id="pagination" class="pagination-container">
-            <!-- Pagination controls will be added here -->
+            <!-- O controle de paginação será adiconados aqui -->
         </div>
     </section>
+    <!--  -->
 
     <!-- Register Modal -->
-    <!-- Register Trip Modal -->
     <div class="modal" id="registerModal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('registerModal')">&times;</span>
             <h2>Cadastrar Ponto Turístico</h2>
-            <form id="tripForm" onsubmit="registerTrip(event)">
+            <form id="pontoForm" onsubmit="registerPonto(event)">
                 <div class="form-group">
                     <label>Nome:</label>
-                    <input type="text" id="Name" required>
+                    <input type="text" id="pontoName" required>
                 </div>
                 <div class="form-group">
                     <label>Descrição:</label>
-                    <input type="text" id="Description" required>
+                    <input type="text" id="pontoDescription" required>
                 </div>
                 <div class="form-group">
                     <label>Localização:</label>
-                    <input type="text" id="Location" required>
+                    <input type="text" id="pontoLocation" required>
                 </div>
                 <div class="form-group">
                     <label>Estado:</label>
-                    <select id="State" required>
-                        <option value="">...</option>
+                    <select id="pontoState" required onchange="loadCities()">
+                        <option value="">Selecione um estado</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Cidade:</label>
-                    <select id="State" required>
-                        <option value="">...</option>
-                        
+                    <select id="pontoCity" required>
+                        <option value="">Selecione uma cidade</option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar Ponto Turístico</button>
-                <button class="btn btn-danger" onclick="clearFields()">Limpar</button>
+                <button type="button" class="btn btn-danger" onclick="clearFields()">Limpar</button>
             </form>
         </div>
     </div>
+    <!--  -->
 
-    <!-- Details Modal -->
+    <!-- Modal de Detalhes -->
     <div class="modal" id="detailsModal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('detailsModal')">&times;</span>
-            <h2>Detalhes do Ponto</h2>
+            <h2>Detalhes do Ponto Turístico</h2>
             <div id="tripDetails" class="trip-details">
                 <div class="details-group">
                     <label>Nome:</label>
-                    <p id="Name"></p>
+                    <p id="detailName"></p>
                 </div>
                 <div class="details-group">
                     <label>Descrição:</label>
-                    <p id="Description"></p>
+                    <p id="detailDescription"></p>
                 </div>
                 <div class="details-group">
                     <label>Localização:</label>
-                    <p id="Location"></p>
+                    <p id="detailLocation"></p>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="closeModal('detailsModal')" class="btn-voltar">Voltar</button>
                 </div>
             </div>
         </div>
     </div>
+    <!--  -->
 
     <!-- Footer -->
     <footer id="contact">
@@ -150,8 +164,17 @@
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="social-links">
+                <p>Tecnologias</p>
+                <a href="#"><i class="fab fa-html5"></i></a>
+                <a href="#"><i class="fab fa-css3"></i></a>
+                <a href="#"><i class="fab fa-js"></i></a>
             </div>
         </div>
     </footer>
+    <!--  -->
+
 </body>
 </html>

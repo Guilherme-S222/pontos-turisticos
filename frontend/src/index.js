@@ -1,37 +1,18 @@
 // Variáveis globais para paginação
 let currentPage = 1;
+let allPontos = [];
 const itemsPerPage = 6;
-let allTrips = [];
 
-// Função para recuperar dados com paginação
-async function recuperarDados() {
-   try {
-      const response = await fetch('https://localhost:7076/api/Pontos');
-      const data = await response.json();
 
-      console.log(data.pontos);
-      const spotsGrid = document.getElementById('spotsGrid');
-      const noResults = document.getElementById('noResults');
+// ==================== Funções de inicialização ====================
 
-      // Limpa ambos os elementos antes de qualquer exibição
-      spotsGrid.innerHTML = '';
-      noResults.style.display = 'none';
+// Carrega os estados quando a página é carregada
+document.addEventListener('DOMContentLoaded', () => {
+   loadStates();
+});
 
-      if (data.pontos && data.pontos.length > 0) {
-         allTrips = data.pontos; // Armazena todos os resultados
-         displayCurrentPage(); // Exibe a página atual
-         updatePaginationControls(); // Atualiza os controles de paginação
-      } else {
-         allTrips = [];
-         document.getElementById('pagination').innerHTML = '';
-         noResults.style.display = 'block';
-      }
-   } catch (error) {
-      console.error('Erro:', error);
-      document.getElementById('pagination').innerHTML = '';
-      noResults.style.display = 'block';
-   }
-}
+
+// ==================== Funções de renderização e paginação ====================
 
 // Função para exibir a página atual
 function displayCurrentPage() {
@@ -43,28 +24,31 @@ function displayCurrentPage() {
 
    const startIndex = (currentPage - 1) * itemsPerPage;
    const endIndex = startIndex + itemsPerPage;
-   const currentPageTrips = allTrips.slice(startIndex, endIndex);
+   const currentPagePontos = allPontos.slice(startIndex, endIndex);
 
-   if (currentPageTrips.length > 0) {
-      currentPageTrips.forEach(trip => {
-         const tripElement = document.createElement('div');
-         tripElement.classList.add('spot-card');
+   if (currentPagePontos.length > 0) {
+      currentPagePontos.forEach(ponto => {
+         const pontoElement = document.createElement('div');
+         pontoElement.classList.add('spot-card');
 
-         tripElement.innerHTML = `
-            <div class='spotimage'>
-               <img src="https://placehold.co/300x200.png" alt="Imagem da Viagem" style="width: 100%; height: 100%; object-fit: cover;">
+         const createdAt = new Date(ponto.createdAt).toLocaleDateString('pt-BR');
+
+         pontoElement.innerHTML = `
+            <div class='spot-image'>
+               <img src="https://placehold.co/300x200.png" alt="Imagem do Ponto Turístico" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="spot-content">
-               <h3>${pontos.name}</h3>
-               <p><strong>Descrição: </strong>${pontos.description}</p>
-               <p><strong>Localização: </strong>${pontos.location}</p>
-               <p><strong>Cidade: </strong>${pontos.city}</p>
-               <p><strong>Estado: </strong>${pontos.state}</p>
-               <button class="btn btn-primary" onclick="viewDetails('${pontos.id}')">Ver Detalhes</button>
+               <h3>${ponto.name}</h3>
+               <p><strong>Descrição: </strong>${ponto.description}</p>
+               <p><strong>Localização: </strong>${ponto.location}</p>
+               <p><strong>Cidade: </strong>${ponto.city}</p>
+               <p><strong>Estado: </strong>${ponto.state}</p>
+               <p><strong>Cadastrado em: </strong>${createdAt}</p>
+               <button class="btn btn-primary" onclick="viewDetails('${ponto.id}')">Ver Detalhes</button>
             </div>
          `;
 
-         spotsGrid.appendChild(tripElement);
+         spotsGrid.appendChild(pontoElement);
       });
    } else {
       noResults.style.display = 'block';
@@ -74,7 +58,7 @@ function displayCurrentPage() {
 
 // Função para atualizar os controles de paginação
 function updatePaginationControls() {
-   const totalPages = Math.ceil(allTrips.length / itemsPerPage);
+   const totalPages = Math.ceil(allPontos.length / itemsPerPage);
    const paginationContainer = document.getElementById('pagination');
 
    if (totalPages <= 1) {
@@ -97,9 +81,44 @@ function updatePaginationControls() {
    paginationContainer.innerHTML = paginationHTML;
 }
 
+// Função para visualizar detalhes do ponto turistico
+async function viewDetails(pontoId) {
+   try {
+      const response = await fetch(`https://localhost:7076/api/Pontos/${pontoId}`);
+
+      if (!response.ok) {
+         throw new Error('Erro ao buscar detalhes do ponto turístico');
+      }
+
+      const ponto = await response.json();
+      const createdAt = new Date(ponto.createdAt).toLocaleDateString('pt-BR');
+
+      // Verificar se os elementos existem antes de acessá-los
+      const nameElement = document.getElementById('detailName');
+      const descriptionElement = document.getElementById('detailDescription');
+      const locationElement = document.getElementById('detailLocation');
+
+      if (!nameElement || !descriptionElement || !locationElement) {
+         throw new Error('Elementos do modal não encontrados');
+      }
+
+      // Preencher os detalhes no modal
+      nameElement.textContent = ponto.name;
+      descriptionElement.textContent = ponto.description;
+      locationElement.textContent = ponto.location;
+
+      // Abrir o modal
+      openModal('detailsModal');
+
+   } catch (error) {
+      console.error('Erro:', error);
+      alert('Erro ao carregar detalhes do ponto turístico');
+   }
+}
+
 // Função para mudar de página
 function changePage(newPage) {
-   const totalPages = Math.ceil(allTrips.length / itemsPerPage);
+   const totalPages = Math.ceil(allPontos.length / itemsPerPage);
 
    if (newPage >= 1 && newPage <= totalPages) {
       currentPage = newPage;
@@ -112,7 +131,40 @@ function changePage(newPage) {
    }
 }
 
-// Modificar a função searchSpots para incluir paginação
+
+// ==================== Funções de requisição ====================
+
+// Função para recuperar todos os pontos
+async function recuperarDados() {
+   try {
+      const response = await fetch('https://localhost:7076/api/Pontos');
+      const data = await response.json();
+
+      const spotsGrid = document.getElementById('spotsGrid');
+      const noResults = document.getElementById('noResults');
+
+      // Limpando ambos os elementos antes de qualquer exibição
+      spotsGrid.innerHTML = '';
+      noResults.style.display = 'none';
+
+      if (data && data.pontos && data.pontos.length > 0) {
+         allPontos = data.pontos;
+         displayCurrentPage();
+         updatePaginationControls();
+      } else {
+         allPontos = [];
+         document.getElementById('pagination').innerHTML = '';
+         noResults.style.display = 'block';
+      }
+   } catch (error) {
+      console.error('Erro:', error);
+      document.getElementById('pagination').innerHTML = '';
+      noResults.style.display = 'block';
+   }
+}
+
+
+// Função responsavel por fazer a busca de um ponto especifico
 async function searchSpots() {
    const searchTerm = document.getElementById('searchInput').value.trim();
    const spotsGrid = document.getElementById('spotsGrid');
@@ -129,11 +181,11 @@ async function searchSpots() {
          return;
       }
 
-      const response = await fetch(`https://localhost:7076/api/Pontos/${encodeURIComponent(name)}/search`);
+      const response = await fetch(`https://localhost:7076/api/Pontos/${encodeURIComponent(searchTerm)}/search`);
 
       if (!response.ok) {
          if (response.status === 404) {
-            allTrips = [];
+            allPontos = [];
             noResults.style.display = 'block';
             return;
          }
@@ -142,35 +194,88 @@ async function searchSpots() {
 
       const data = await response.json();
 
-      if (data.trips && data.trips.length > 0) {
-         allTrips = data.trips;
+      if (data && data.pontos && data.pontos.length > 0) {
+         allPontos = data.pontos;
          currentPage = 1;
          displayCurrentPage();
          updatePaginationControls();
       } else {
-         allTrips = [];
+         allPontos = [];
          noResults.style.display = 'block';
       }
    } catch (error) {
       console.error('Erro ao buscar pontos turísticos:', error);
-      allTrips = [];
+      allPontos = [];
       noResults.style.display = 'block';
       alert('Ocorreu um erro ao buscar os dados. Por favor, tente novamente.');
    }
 }
 
-// Scroll to search section
+// Função para registrar um novo ponto turístico
+async function registerPonto(event) {
+
+   event.preventDefault();
+
+   const pontoData = {
+      name: document.getElementById('pontoName').value,
+      description: document.getElementById('pontoDescription').value,
+      location: document.getElementById('pontoLocation').value,
+      city: document.getElementById('pontoCity').value,
+      state: document.getElementById('pontoState').value
+   };
+
+   try {
+      const response = await fetch('https://localhost:7076/api/Pontos', {
+         method: 'POST',
+         headers: {
+            'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(pontoData)
+      });
+
+      if (!response.ok) {
+         const errorData = await response.json();
+         throw new Error(errorData.messages?.join(', ') || 'Erro ao registrar ponto turístico');
+      }
+
+      // Fecha o modal
+      closeModal('registerModal');
+
+      // Limpa o formulário
+      document.getElementById('pontoForm').reset();
+
+      // Atualiza a lista de pontos
+      await recuperarDados();
+
+      // Mostra mensagem de sucesso
+      alert('Ponto turístico registrado com sucesso!');
+
+   } catch (error) {
+      console.error('Erro:', error);
+      alert('Erro ao registrar ponto turístico: ' + error.message);
+   }
+}
+
+
+// ==================== Funções auxiliares ====================
+
+// Scroll para a section de busca
 function scrollToSearch() {
    document.getElementById('search').scrollIntoView({ behavior: 'smooth' });
 }
 
-// Modal functions
 function openModal(modalId) {
    document.getElementById(modalId).style.display = 'block';
 }
 
 function closeModal(modalId) {
    document.getElementById(modalId).style.display = 'none';
+}
+
+// Função para limpar os campos
+function clearFields() {
+   document.getElementById('pontoForm').reset();
+   document.getElementById('pontoCity').innerHTML = '<option value="">Selecione uma cidade</option>';
 }
 
 // Fechar modal quando clicar fora dele
@@ -180,100 +285,76 @@ window.onclick = function (event) {
    }
 }
 
-// Função para visualizar detalhes da viagem
-async function viewDetails(pontoId) {
-   try {
-      const response = await fetch(`https://localhost:7076/api/Pontos/${pontoId}`);
+// ==================== Funções para buscar cidade na api do IBGE ===================
+const estados = [
+   { sigla: 'AC', nome: 'Acre' },
+   { sigla: 'AL', nome: 'Alagoas' },
+   { sigla: 'AP', nome: 'Amapá' },
+   { sigla: 'AM', nome: 'Amazonas' },
+   { sigla: 'BA', nome: 'Bahia' },
+   { sigla: 'CE', nome: 'Ceará' },
+   { sigla: 'DF', nome: 'Distrito Federal' },
+   { sigla: 'ES', nome: 'Espírito Santo' },
+   { sigla: 'GO', nome: 'Goiás' },
+   { sigla: 'MA', nome: 'Maranhão' },
+   { sigla: 'MT', nome: 'Mato Grosso' },
+   { sigla: 'MS', nome: 'Mato Grosso do Sul' },
+   { sigla: 'MG', nome: 'Minas Gerais' },
+   { sigla: 'PA', nome: 'Pará' },
+   { sigla: 'PB', nome: 'Paraíba' },
+   { sigla: 'PR', nome: 'Paraná' },
+   { sigla: 'PE', nome: 'Pernambuco' },
+   { sigla: 'PI', nome: 'Piauí' },
+   { sigla: 'RJ', nome: 'Rio de Janeiro' },
+   { sigla: 'RN', nome: 'Rio Grande do Norte' },
+   { sigla: 'RS', nome: 'Rio Grande do Sul' },
+   { sigla: 'RO', nome: 'Rondônia' },
+   { sigla: 'RR', nome: 'Roraima' },
+   { sigla: 'SC', nome: 'Santa Catarina' },
+   { sigla: 'SP', nome: 'São Paulo' },
+   { sigla: 'SE', nome: 'Sergipe' },
+   { sigla: 'TO', nome: 'Tocantins' }
+];
 
-      if (!response.ok) {
-         throw new Error('Erro ao buscar detalhes da viagem');
-      }
+// Função para carregar os estados
+function loadStates() {
+   const stateSelect = document.getElementById('pontoState');
 
-      const trip = await response.json();
+   // Limpa as opções existentes
+   stateSelect.innerHTML = '<option value="">Selecione um estado</option>';
 
-      // Formatar as datas
-      const startDate = new Date(trip.startDate);
-      const endDate = new Date(trip.endDate);
-      const today = new Date();
-
-      // Calcular duração em dias
-      const duration = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
-
-      // Determinar status da viagem
-      let status;
-      if (today < startDate) {
-         status = { text: 'Próxima', class: 'status-upcoming' };
-      } else if (today > endDate) {
-         status = { text: 'Concluída', class: 'status-completed' };
-      } else {
-         status = { text: 'Em Andamento', class: 'status-active' };
-      }
-
-      // Preencher os detalhes no modal
-      document.getElementById('detailName').textContent = trip.name;
-      document.getElementById('detailStartDate').textContent = startDate.toLocaleDateString('pt-BR');
-      document.getElementById('detailEndDate').textContent = endDate.toLocaleDateString('pt-BR');
-      document.getElementById('detailDuration').textContent = `${duration} dias`;
-
-      const statusElement = document.getElementById('detailStatus');
-      statusElement.textContent = status.text;
-      statusElement.className = status.class;
-
-      // Abrir o modal
-      openModal('detailsModal');
-
-   } catch (error) {
-      console.error('Erro:', error);
-      alert('Erro ao carregar detalhes da viagem');
-   }
+   // Adiciona os estados
+   estados.forEach(estado => {
+      const option = document.createElement('option');
+      option.value = estado.sigla;
+      option.textContent = estado.nome;
+      stateSelect.appendChild(option);
+   });
 }
 
-// Função para registrar uma nova viagem
-async function registerTrip(event) {
-   event.preventDefault();
+// Função para carregar as cidades baseado no estado selecionado
+async function loadCities() {
+   const stateSelect = document.getElementById('pontoState');
+   const citySelect = document.getElementById('pontoCity');
+   const selectedState = stateSelect.value;
 
-   const tripData = {
-      name: document.getElementById('tripName').value,
-      startDate: new Date(document.getElementById('tripStartDate').value).toISOString(),
-      endDate: new Date(document.getElementById('tripEndDate').value).toISOString()
-   };
+   // Limpa as cidades
+   citySelect.innerHTML = '<option value="">Selecione uma cidade</option>';
 
-   try {
-      const response = await fetch('https://localhost:7098/api/Trips', {
-         method: 'POST',
-         headers: {
-            'Content-Type': 'application/json'
-         },
-         body: JSON.stringify(tripData)
-      });
+   if (selectedState) {
+      try {
+         const response = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${selectedState}/municipios`);
+         const cities = await response.json();
 
-      if (!response.ok) {
-         const errorData = await response.json();
-         throw new Error(errorData.messages?.join(', ') || 'Erro ao registrar viagem');
+         cities.forEach(city => {
+            const option = document.createElement('option');
+            option.value = city.nome;
+            option.textContent = city.nome;
+            citySelect.appendChild(option);
+         });
+      } catch (error) {
+         console.error('Erro ao carregar cidades:', error);
+         alert('Erro ao carregar as cidades. Por favor, tente novamente.');
       }
-
-      const novaViagem = await response.json();
-
-      // Fecha o modal
-      closeModal('registerModal');
-
-      // Limpa o formulário
-      document.getElementById('tripForm').reset();
-
-      // Atualiza a lista de viagens
-      await recuperarDados();
-
-      // Opcional: Mostra mensagem de sucesso
-      alert('Viagem registrada com sucesso!');
-
-   } catch (error) {
-      console.error('Erro:', error);
-      alert('Erro ao registrar viagem: ' + error.message);
    }
-}
-
-function clearFields() {
-
-   document.getElementById('tripForm').reset();
-
 }
