@@ -1,0 +1,317 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styles */
+header {
+   background-color: white;
+   padding: 1rem;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   position: fixed;
+   width: 100%;
+   z-index: 1000;
+}
+
+.header-content {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo {
+   font-size: 24px;
+   font-weight: bold;
+   color: #2c3e50;
+   cursor: default;
+}
+
+.nav-links a {
+   text-decoration: none;
+   color: #2c3e50;
+   margin-left: 2rem;
+   font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+   background: linear-gradient(rgba(0,0,0,0.5), rgba(221, 122, 9, 0.555)), url('/api/placeholder/1920/1080');
+   background-size: cover;
+   background-position: center;
+   height: 80vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   text-align: center;
+   padding: 1rem;
+}
+
+.hero-content {
+   max-width: 800px;
+}
+
+.hero h1 {
+   font-size: 3rem;
+   margin-bottom: 1rem;
+}
+
+.hero p {
+   font-size: 1.2rem;
+   margin-bottom: 2rem;
+}
+
+/* Search Section */
+.search-section {
+   padding: 4rem 1rem;
+   background-color: #f8f9fa;
+}
+
+.search-container {
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.search-box {
+   display: flex;
+   gap: 1rem;
+   margin-bottom: 2rem;
+}
+
+.search-box input {
+   flex: 1;
+   padding: 1rem;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   font-size: 1rem;
+}
+
+.btn {
+   padding: 1rem 2rem;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-weight: 500;
+   transition: all 0.3s ease;
+}
+
+.btn-primary {
+   background-color: #3498db;
+   color: white;
+}
+
+.btn-primary:hover {
+   background-color: #2980b9;
+}
+
+/* Results Section */
+.results-section {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 4rem 1rem;
+}
+
+.spot-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 2rem;
+   margin-top: 2rem;
+}
+
+.spot-card {
+   background: white;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   transition: transform 0.3s ease;
+}
+
+.spot-card:hover {
+   transform: translateY(-5px);
+}
+
+.spot-image {
+   height: 200px;
+   background-color: #ddd;
+}
+
+.spot-content {
+   padding: 1.5rem;
+}
+
+.spot-content h3 {
+   margin-bottom: 1rem;
+   color: #2c3e50;
+}
+
+/* Modal */
+.modal {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.5);
+   z-index: 1001;
+}
+
+.modal-content {
+   background-color: white;
+   max-width: 600px;
+   margin: 2rem auto;
+   padding: 2rem;
+   border-radius: 8px;
+   position: relative;
+   max-height: 90vh;
+   overflow-y: auto;
+}
+
+.close-modal {
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+
+.form-group {
+   margin-bottom: 1.5rem;
+}
+
+.form-group label {
+   display: block;
+   margin-bottom: 0.5rem;
+   font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+   width: 100%;
+   padding: 0.8rem;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   font-size: 1rem;
+}
+
+.no-results {
+   text-align: center;
+   padding: 4rem;
+   color: #666;
+}
+
+/* Footer */
+footer {
+   background-color: #012446;
+   color: white;
+   padding: 4rem 1rem;
+   margin-top: 4rem;
+}
+
+.footer-content {
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.social-links {
+   margin-top: 2rem;
+}
+
+.social-links a {
+   color: white;
+   margin: 0 1rem;
+   font-size: 1.5rem;
+}
+
+.carousel-item img {
+   width: 100%;
+   height: 500px;
+   object-fit: cover;
+}
+
+.pagination-container {
+   margin: 2rem 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.pagination {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+
+.pagination button {
+   padding: 0.5rem 1rem;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+   background-color: #0056b3;
+}
+
+.pagination button:disabled {
+   background-color: #ccc;
+   cursor: not-allowed;
+}
+
+.pagination span {
+   font-size: 0.9rem;
+   color: #666;
+}
+
+.trip-details {
+   padding: 20px;
+}
+
+.details-group {
+   margin-bottom: 15px;
+}
+
+.details-group label {
+   font-weight: bold;
+   display: block;
+   margin-bottom: 5px;
+   color: #333;
+}
+
+.details-group p {
+   margin: 0;
+   padding: 8px;
+   background-color: #f8f9fa;
+   border-radius: 4px;
+}
+
+#detailStatus {
+   display: inline-block;
+   padding: 5px 10px;
+   border-radius: 4px;
+   font-weight: bold;
+}
+
+.status-active {
+   background-color: #28a745;
+   color: #2980b9;
+}
+
+.status-completed {
+   background-color: #6c757d;
+   color: green;
+}
+
+.status-upcoming {
+   background-color: #007bff;
+   color: #ffbb01;
+}
