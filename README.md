@@ -26,7 +26,23 @@ pontos-turisticos/
 
 ## Configuração do Banco de Dados SQLite 💾
 
-O banco de dados SQLite já está configurado e o arquivo PontosDatabase.db encontra-se na pasta raiz do projeto. **Não é necessário criar ou configurar o banco manualmente.**
+**Local do banco de dados**
+
+O arquivo do banco de dados PontosDatabase.db encontra-se na raiz do projeto. Ele contém os dados necessários para os testes da API e já está pronto para uso.
+
+**Conexão**
+
+A conexão com o banco de dados SQLite é feita no arquivo `PontosDbContext.cs` dentro das pastas `src/PontosTuristicos.Infrastructure/PontosDbContext.cs`. O caminho para o banco de dados é especificado no método `OnConfiguring` da classe `PontosDbContext`:
+```
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Data Source=INSIRA-AQUI-O-CAMINHO-PARA-O-BANCO-DE-DADOS\\pontos-turisticos\\PontosDatabase.db");
+        }
+```
+
+**Testando a conexão**
+
+Certifique-se de que o arquivo PontosDatabase.db esteja no local correto antes de iniciar a API. Para validar que a API está conectada ao banco, você pode testar o endpoint GET /api/Pontos para listar os pontos turísticos disponíveis.
 
 ## Documentação da API 📄
 
@@ -93,6 +109,7 @@ Obs.: Toda a documentação da API também consta no Swagger ao compilar e execu
 **Back-end (API)**
 
 - Abra o projeto no Visual Studio 2022.
+- Certifique-se de que o arquivo PontosDatabase.db está no local correto (raiz do projeto).
 - Compile e execute o projeto pressionando F5.
 - Acesse o Swagger UI para testar os endpoints no navegador:
 
