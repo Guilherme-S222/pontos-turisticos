@@ -9,7 +9,7 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.GetAll
         {
             var dbContext = new PontosDbContext();
 
-            var pontos = dbContext.Pontos.ToList();
+            var pontos = dbContext.Pontos.OrderByDescending(ponto => ponto.CreatedAt).ToList();
 
             return new ResponsePontosJson
             {
