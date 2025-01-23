@@ -22,6 +22,12 @@ builder.Services.AddCors(options =>
         });
 });
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(7076); // Porta HTTP
+    options.ListenAnyIP(7077, listenOptions => listenOptions.UseHttps()); // Porta HTTPS
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

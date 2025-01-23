@@ -35,7 +35,7 @@ function displayCurrentPage() {
 
          pontoElement.innerHTML = `
             <div class='spot-image'>
-               <img src="https://placehold.co/300x200.png" alt="Imagem do Ponto Turístico" style="width: 100%; height: 100%; object-fit: cover;">
+               <img src="img/landscape-placeholder-svgrepo-com.svg" alt="Imagem do Ponto Turístico" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="spot-content">
                <h3>${ponto.name}</h3>
@@ -45,6 +45,7 @@ function displayCurrentPage() {
                <p><strong>Estado: </strong>${ponto.state}</p>
                <p><strong>Cadastrado em: </strong>${createdAt}</p>
                <button class="btn btn-primary" onclick="viewDetails('${ponto.id}')">Ver Detalhes</button>
+               <button onclick="deletePonto('${ponto.id}')" class="btn btn-danger">Excluir</button>
             </div>
          `;
 
@@ -84,7 +85,7 @@ function updatePaginationControls() {
 // Função para visualizar detalhes do ponto turistico
 async function viewDetails(pontoId) {
    try {
-      const response = await fetch(`https://localhost:7076/api/Pontos/${pontoId}`);
+      const response = await fetch(`https://localhost:7077/api/Pontos/${pontoId}`);
 
       if (!response.ok) {
          throw new Error('Erro ao buscar detalhes do ponto turístico');
@@ -137,7 +138,7 @@ function changePage(newPage) {
 // Função para recuperar todos os pontos
 async function recuperarDados() {
    try {
-      const response = await fetch('https://localhost:7076/api/Pontos');
+      const response = await fetch('https://localhost:7077/api/Pontos');
       const data = await response.json();
 
       const spotsGrid = document.getElementById('spotsGrid');
@@ -181,7 +182,7 @@ async function searchSpots() {
          return;
       }
 
-      const response = await fetch(`https://localhost:7076/api/Pontos/${encodeURIComponent(searchTerm)}/search`);
+      const response = await fetch(`https://localhost:7077/api/Pontos/${encodeURIComponent(searchTerm)}/search`);
 
       if (!response.ok) {
          if (response.status === 404) {
@@ -225,7 +226,7 @@ async function registerPonto(event) {
    };
 
    try {
-      const response = await fetch('https://localhost:7076/api/Pontos', {
+      const response = await fetch('https://localhost:7077/api/Pontos', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json'
@@ -255,6 +256,31 @@ async function registerPonto(event) {
       alert('Erro ao registrar ponto turístico: ' + error.message);
    }
 }
+
+async function deletePonto(pontoId) {
+   const confirmation = confirm("Tem certeza que deseja excluir este ponto turístico?");
+   if (!confirmation) return;
+
+   try {
+      const response = await fetch(`https://localhost:7077/api/Pontos/${pontoId}`, {
+         method: 'DELETE',
+      });
+
+      if (!response.ok) {
+         const errorData = await response.json();
+         throw new Error(errorData.messages?.join(', ') || 'Erro ao excluir ponto turístico');
+      }
+
+      // Atualiza a lista de pontos após a exclusão
+      alert('Ponto turístico excluído com sucesso!');
+      await recuperarDados();
+
+   } catch (error) {
+      console.error('Erro ao excluir ponto turístico:', error);
+      alert('Erro ao excluir ponto turístico: ' + error.message);
+   }
+}
+
 
 
 // ==================== Funções auxiliares ====================
