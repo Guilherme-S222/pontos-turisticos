@@ -79,6 +79,15 @@ namespace PontosTuristicos.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The image path cannot be empty.
+        /// </summary>
+        public static string IMAGE_PATH_EMPTY {
+            get {
+                return ResourceManager.GetString("IMAGE_PATH_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The location cannot be empty.
         /// </summary>
         public static string LOCATION_EMPTY {

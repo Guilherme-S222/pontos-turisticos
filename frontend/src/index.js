@@ -14,13 +14,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ==================== Funções de renderização e paginação ====================
 
-// Função para exibir a página atual
+// Função para exibir a página atual e cards dos pontos turisticos
+function createCard(ponto) {
+   // Criação do card
+   const pontoElement = document.createElement('div');
+   pontoElement.classList.add('spot-card');
+
+   // Criação do template de HTML para o card
+   const createdAt = new Date(ponto.createdAt).toLocaleDateString('pt-BR');
+   const description = ponto.description.length > 70
+      ? ponto.description.slice(0, 70) + "..."
+      : ponto.description;
+
+   pontoElement.innerHTML = `
+      <div class='spot-image'>
+         <img src=${ponto.imagePath} alt="Imagem do Ponto Turístico">
+      </div>
+      <div class="card-name">
+         <h3>${ponto.name}</h3>
+      </div>
+      <div class="spot-content">
+         <p><strong>Descrição: </strong>${description}</p>
+         <p><strong>Localização: </strong>${ponto.location}</p>
+         <p><strong>Cidade: </strong>${ponto.city}</p>
+         <p><strong>Estado: </strong>${ponto.state}</p>
+         <p><strong>Cadastrado em: </strong>${createdAt}</p>
+      </div>
+      <div class="card-btn">
+         <button class="btn btn-primary" onclick="viewDetails('${ponto.id}')">Ver Detalhes</button>
+         <button onclick="deletePonto('${ponto.id}')" class="btn btn-danger">Excluir</button>
+      </div>
+   `;
+   return pontoElement;
+}
+
 function displayCurrentPage() {
    const spotsGrid = document.getElementById('spotsGrid');
    const noResults = document.getElementById('noResults');
 
-   spotsGrid.innerHTML = '';
-   noResults.style.display = 'none';
+   spotsGrid.innerHTML = ''; // Limpar conteúdo anterior
+   noResults.style.display = 'none'; // Esconder mensagem de sem resultados
 
    const startIndex = (currentPage - 1) * itemsPerPage;
    const endIndex = startIndex + itemsPerPage;
@@ -28,27 +61,7 @@ function displayCurrentPage() {
 
    if (currentPagePontos.length > 0) {
       currentPagePontos.forEach(ponto => {
-         const pontoElement = document.createElement('div');
-         pontoElement.classList.add('spot-card');
-
-         const createdAt = new Date(ponto.createdAt).toLocaleDateString('pt-BR');
-
-         pontoElement.innerHTML = `
-            <div class='spot-image'>
-               <img src="img/landscape-placeholder-svgrepo-com.svg" alt="Imagem do Ponto Turístico" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="spot-content">
-               <h3>${ponto.name}</h3>
-               <p><strong>Descrição: </strong>${ponto.description}</p>
-               <p><strong>Localização: </strong>${ponto.location}</p>
-               <p><strong>Cidade: </strong>${ponto.city}</p>
-               <p><strong>Estado: </strong>${ponto.state}</p>
-               <p><strong>Cadastrado em: </strong>${createdAt}</p>
-               <button class="btn btn-primary" onclick="viewDetails('${ponto.id}')">Ver Detalhes</button>
-               <button onclick="deletePonto('${ponto.id}')" class="btn btn-danger">Excluir</button>
-            </div>
-         `;
-
+         const pontoElement = createCard(ponto);
          spotsGrid.appendChild(pontoElement);
       });
    } else {
@@ -85,7 +98,7 @@ function updatePaginationControls() {
 // Função para visualizar detalhes do ponto turistico
 async function viewDetails(pontoId) {
    try {
-      const response = await fetch(`https://localhost:7077/api/Pontos/${pontoId}`);
+      const response = await fetch(`https://localhost:7076/api/Pontos/${pontoId}`);
 
       if (!response.ok) {
          throw new Error('Erro ao buscar detalhes do ponto turístico');
@@ -138,7 +151,7 @@ function changePage(newPage) {
 // Função para recuperar todos os pontos
 async function recuperarDados() {
    try {
-      const response = await fetch('https://localhost:7077/api/Pontos');
+      const response = await fetch('https://localhost:7076/api/Pontos');
       const data = await response.json();
 
       const spotsGrid = document.getElementById('spotsGrid');
@@ -182,7 +195,7 @@ async function searchSpots() {
          return;
       }
 
-      const response = await fetch(`https://localhost:7077/api/Pontos/${encodeURIComponent(searchTerm)}/search`);
+      const response = await fetch(`https://localhost:7076/api/Pontos/${encodeURIComponent(searchTerm)}/search`);
 
       if (!response.ok) {
          if (response.status === 404) {
@@ -212,7 +225,7 @@ async function searchSpots() {
    }
 }
 
-// Função para registrar um novo ponto turístico
+// // Função para registrar um novo ponto turístico
 async function registerPonto(event) {
 
    event.preventDefault();
@@ -222,11 +235,13 @@ async function registerPonto(event) {
       description: document.getElementById('pontoDescription').value,
       location: document.getElementById('pontoLocation').value,
       city: document.getElementById('pontoCity').value,
-      state: document.getElementById('pontoState').value
+      state: document.getElementById('pontoState').value,
+      imagePath: "img/landscape-placeholder-svgrepo-com.svg"
    };
 
+
    try {
-      const response = await fetch('https://localhost:7077/api/Pontos', {
+      const response = await fetch('https://localhost:7076/api/Pontos', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json'
@@ -257,12 +272,65 @@ async function registerPonto(event) {
    }
 }
 
+// async function registerPonto(event) {
+
+//    event.preventDefault();
+
+//    const formData = new FormData();
+//    formData.append('name', document.getElementById('pontoName').value);
+//    formData.append('description', document.getElementById('pontoDescription').value);
+//    formData.append('location', document.getElementById('pontoLocation').value);
+//    formData.append('city', document.getElementById('pontoCity').value);
+//    formData.append('state', document.getElementById('pontoState').value);
+
+//    const imagePath = document.getElementById('pontoImage').files[0];
+
+//    if (imagePath) {
+//       formData.append('imagePath', imagePath);
+//    } else {
+//       formData.append('imagePath', 'img/landscape-placeholder-svgrepo-com.svg');
+//    }
+
+//    try {
+
+//       const response = await fetch('https://localhost:7076/api/Pontos', {
+//          method: 'POST',
+//          headers: {
+//             'Content-Type': 'application/json'
+//          },
+//          body: formData
+//       });
+
+//       if (!response.ok) {
+//          const errorData = await response.json();
+//          throw new Error(errorData.messages?.join(', ') || 'Erro ao registrar ponto turístico');
+//       }
+
+//       // Fecha o modal
+//       closeModal('registerModal');
+
+//       // Limpa o formulário
+//       document.getElementById('pontoForm').reset();
+
+//       // Atualiza a lista de pontos
+//       await recuperarDados();
+
+//       // Mostra mensagem de sucesso
+//       alert('Ponto turístico registrado com sucesso!');
+
+//    } catch (error) {
+//       console.error('Erro:', error);
+//       alert('Erro ao registrar ponto turístico: ' + error.message);
+//    }
+
+// }
+
 async function deletePonto(pontoId) {
    const confirmation = confirm("Tem certeza que deseja excluir este ponto turístico?");
    if (!confirmation) return;
 
    try {
-      const response = await fetch(`https://localhost:7077/api/Pontos/${pontoId}`, {
+      const response = await fetch(`https://localhost:7076/api/Pontos/${pontoId}`, {
          method: 'DELETE',
       });
 

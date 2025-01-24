@@ -15,6 +15,8 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.Register
             RuleFor(request => request.City).NotEmpty().WithMessage(ResourceErrorMessages.CITY_EMPTY);
 
             RuleFor(request => request.State).NotEmpty().WithMessage(ResourceErrorMessages.STATE_EMPTY);
+
+            RuleFor(request => request.ImagePath).NotEmpty().WithMessage(ResourceErrorMessages.IMAGE_PATH_EMPTY);
         }
     }
 }

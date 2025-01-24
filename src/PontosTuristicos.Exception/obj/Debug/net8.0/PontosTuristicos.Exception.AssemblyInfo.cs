@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PontosTuristicos.Exception")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+340c4b9f0ac293adf9d1a4eeeda86d298abcebb8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa876acb591f6e16be5a45f082a3002bfdacc6cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("PontosTuristicos.Exception")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PontosTuristicos.Exception")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

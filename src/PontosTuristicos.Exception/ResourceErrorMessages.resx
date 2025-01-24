@@ -138,4 +138,7 @@
   <data name="UNKNOWN_ERROR" xml:space="preserve">
     <value>Unknown error</value>
   </data>
+  <data name="IMAGE_PATH_EMPTY" xml:space="preserve">
+    <value>The image path cannot be empty</value>
+  </data>
 </root>

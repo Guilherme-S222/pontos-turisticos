@@ -285,6 +285,10 @@
           "state": {
             "type": "string",
             "nullable": true
+          },
+          "imagePath": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -332,6 +336,10 @@
           "createdAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "imagePath": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -371,6 +379,10 @@
           "createdAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "imagePath": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

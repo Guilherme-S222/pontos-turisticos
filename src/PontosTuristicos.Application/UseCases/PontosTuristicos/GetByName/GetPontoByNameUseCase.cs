@@ -36,6 +36,7 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.GetByName
                     City = ponto.City,
                     State = ponto.State,
                     CreatedAt = ponto.CreatedAt,
+                    ImagePath = ponto.ImagePath
                 }).ToList(),
             };
 

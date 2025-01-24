@@ -100,15 +100,15 @@
             <form id="pontoForm" onsubmit="registerPonto(event)">
                 <div class="form-group">
                     <label>Nome:</label>
-                    <input type="text" id="pontoName" required>
+                    <input type="text" id="pontoName" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                     <label>Descrição:</label>
-                    <input type="text" id="pontoDescription" required>
+                    <input type="text" id="pontoDescription" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                     <label>Localização:</label>
-                    <input type="text" id="pontoLocation" required>
+                    <input type="text" id="pontoLocation" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                     <label>Estado:</label>
@@ -122,6 +122,10 @@
                         <option value="">Selecione uma cidade</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label>Imagem:</label>
+                    <input type="file" id="pontoImage" accept="image/*">
+                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar Ponto Turístico</button>
                 <button type="button" class="btn btn-danger" onclick="clearFields()">Limpar</button>
             </form>
@@ -161,10 +165,10 @@
             <h3>TravelingSpot</h3>
             <p>Conectando pessoas a lugares incríveis</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com/Guilherme-S222" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/guilherme-anjolette?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3ByUQJmtEjQb6CoHF74U9nFg%3D%3D" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:anjolettegui@gmail.com" title="E-mail"><i class="fa fa-envelope"></i></a>
+                <a href="https://web.whatsapp.com/send?phone=5518996602927" target="_blank" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
             </div>
             <div class="social-links">
                 <p>Tecnologias</p>
