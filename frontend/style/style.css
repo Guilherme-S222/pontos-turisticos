@@ -21,6 +21,7 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   height: 60px;
 }
 
 .logo {
@@ -28,6 +29,14 @@ header {
    font-weight: bold;
    color: #2c3e50;
    cursor: default;
+}
+
+.logo img {
+   width: 100px;
+}
+
+.img-logo-footer {
+   width: 200px;
 }
 
 .nav-links a {

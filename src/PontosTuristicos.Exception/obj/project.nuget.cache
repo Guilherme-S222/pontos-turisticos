@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "INihARcp59Q=",
+  "dgSpecHash": "e9X/KJcdhnc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Exception\\PontosTuristicos.Exception.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Guilherme\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.12\\microsoft.windowsdesktop.app.ref.8.0.12.nupkg.sha512",
-    "C:\\Users\\Guilherme\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.12\\microsoft.netcore.app.ref.8.0.12.nupkg.sha512",
-    "C:\\Users\\Guilherme\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.12\\microsoft.aspnetcore.app.ref.8.0.12.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

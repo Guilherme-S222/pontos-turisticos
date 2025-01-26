@@ -98,7 +98,7 @@ function updatePaginationControls() {
 // Função para visualizar detalhes do ponto turistico
 async function viewDetails(pontoId) {
    try {
-      const response = await fetch(`https://localhost:7076/api/Pontos/${pontoId}`);
+      const response = await fetch(`http://localhost:5294/api/Pontos/${pontoId}`);
 
       if (!response.ok) {
          throw new Error('Erro ao buscar detalhes do ponto turístico');
@@ -151,7 +151,7 @@ function changePage(newPage) {
 // Função para recuperar todos os pontos
 async function recuperarDados() {
    try {
-      const response = await fetch('https://localhost:7076/api/Pontos');
+      const response = await fetch('http://localhost:5294/api/Pontos');
       const data = await response.json();
 
       const spotsGrid = document.getElementById('spotsGrid');
@@ -195,7 +195,7 @@ async function searchSpots() {
          return;
       }
 
-      const response = await fetch(`https://localhost:7076/api/Pontos/${encodeURIComponent(searchTerm)}/search`);
+      const response = await fetch(`http://localhost:5294/api/Pontos/${encodeURIComponent(searchTerm)}/search`);
 
       if (!response.ok) {
          if (response.status === 404) {
@@ -241,7 +241,7 @@ async function registerPonto(event) {
 
 
    try {
-      const response = await fetch('https://localhost:7076/api/Pontos', {
+      const response = await fetch('http://localhost:5294/api/Pontos', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json'
@@ -293,7 +293,7 @@ async function registerPonto(event) {
 
 //    try {
 
-//       const response = await fetch('https://localhost:7076/api/Pontos', {
+//       const response = await fetch('http://localhost:5294/api/Pontos', {
 //          method: 'POST',
 //          headers: {
 //             'Content-Type': 'application/json'
@@ -330,7 +330,7 @@ async function deletePonto(pontoId) {
    if (!confirmation) return;
 
    try {
-      const response = await fetch(`https://localhost:7076/api/Pontos/${pontoId}`, {
+      const response = await fetch(`http://localhost:5294/api/Pontos/${pontoId}`, {
          method: 'DELETE',
       });
 
@@ -437,7 +437,7 @@ async function loadCities() {
 
    if (selectedState) {
       try {
-         const response = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${selectedState}/municipios`);
+         const response = await fetch(`http://servicodados.ibge.gov.br/api/v1/localidades/estados/${selectedState}/municipios`);
          const cities = await response.json();
 
          cities.forEach(city => {
