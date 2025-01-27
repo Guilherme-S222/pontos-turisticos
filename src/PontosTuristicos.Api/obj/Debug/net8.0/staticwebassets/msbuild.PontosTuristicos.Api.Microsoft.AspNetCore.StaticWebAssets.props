@@ -54,6 +54,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PontosTuristicos.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PontosTuristicos.Api</BasePath>
+      <RelativePath>img/9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lipy9as2wo</Fingerprint>
+      <Integrity>rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>PontosTuristicos.Api</SourceId>

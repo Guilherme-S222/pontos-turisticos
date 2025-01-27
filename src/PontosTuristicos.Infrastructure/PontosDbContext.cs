@@ -9,7 +9,7 @@ namespace PontosTuristicos.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\PontosDatabase.db");
+            optionsBuilder.UseSqlite("Data Source=INSERIR-O-CAMINHO-DO-BANCO-DE-DADOS-AQUI/PontosDatabase.db");
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KTzKXTM7qVZJAuk0xmxh4ANf5oHLIC3gnYvJm/bJD5w=",
+  "Hash": "k8QvgtMBnbI7MIXfhLHc/a6ni54NZGrujfAgWZysHdY=",
   "Source": "PontosTuristicos.Api",
   "BasePath": "_content/PontosTuristicos.Api",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg",
+      "SourceId": "PontosTuristicos.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\",
+      "BasePath": "_content/PontosTuristicos.Api",
+      "RelativePath": "img/9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lipy9as2wo",
+      "Integrity": "rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg"
     },
     {
       "Identity": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg",
@@ -387,6 +408,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y="
+        }
+      ]
+    },
+    {
+      "Route": "img/9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 02:32:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc="
+        }
+      ]
+    },
+    {
+      "Route": "img/9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.lipy9as2wo.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 02:32:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lipy9as2wo"
+        },
+        {
+          "Name": "label",
+          "Value": "img/9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc="
         }
       ]
     },

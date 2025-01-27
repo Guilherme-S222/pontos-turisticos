@@ -249,6 +249,88 @@
       ]
     },
     {
+      "Route": "img/9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg",
+      "AssetFile": "img/9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 02:32:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc="
+        }
+      ]
+    },
+    {
+      "Route": "img/9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.lipy9as2wo.jpg",
+      "AssetFile": "img/9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 02:32:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lipy9as2wo"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc="
+        },
+        {
+          "Name": "label",
+          "Value": "img/9d7505db-8225-4ceb-bf78-f05c5c7f04ce_cristo-redentor.jpg"
+        }
+      ]
+    },
+    {
       "Route": "img/a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg",
       "AssetFile": "img/a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg",
       "Selectors": [],
