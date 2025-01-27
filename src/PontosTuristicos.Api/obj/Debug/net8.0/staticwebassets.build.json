@@ -1,12 +1,537 @@
 {
   "Version": 1,
-  "Hash": "oDOJGrMP8fPCt9s3TAr3B97g9l96jXs1rtPC/5VjTb0=",
+  "Hash": "ha5bpYD0gGKWsG2Y8mkVXREMoHz6PGSnK0QLowYpCYM=",
   "Source": "PontosTuristicos.Api",
   "BasePath": "_content/PontosTuristicos.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "PontosTuristicos.Api\\wwwroot",
+      "Source": "PontosTuristicos.Api",
+      "ContentRoot": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\",
+      "BasePath": "_content/PontosTuristicos.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg",
+      "SourceId": "PontosTuristicos.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\",
+      "BasePath": "_content/PontosTuristicos.Api",
+      "RelativePath": "img/37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ilbyvxo184",
+      "Integrity": "NtIhn0LL+fcz7dZfvJZb+4sQnB1EeB4tBXbhGk+/ji0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg",
+      "SourceId": "PontosTuristicos.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\",
+      "BasePath": "_content/PontosTuristicos.Api",
+      "RelativePath": "img/5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vm524ki7q0",
+      "Integrity": "B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg",
+      "SourceId": "PontosTuristicos.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\",
+      "BasePath": "_content/PontosTuristicos.Api",
+      "RelativePath": "img/a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lipy9as2wo",
+      "Integrity": "rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda.jpg",
+      "SourceId": "PontosTuristicos.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\",
+      "BasePath": "_content/PontosTuristicos.Api",
+      "RelativePath": "img/a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vm524ki7q0",
+      "Integrity": "B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\landscape-placeholder-svgrepo-com.svg",
+      "SourceId": "PontosTuristicos.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\",
+      "BasePath": "_content/PontosTuristicos.Api",
+      "RelativePath": "img/landscape-placeholder-svgrepo-com#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9la8nl6uf9",
+      "Integrity": "Y01EqYdFlXrZmez1SNSUrIbNZtllxvo6nt5ejTFe4HA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\landscape-placeholder-svgrepo-com.svg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "img/37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.ilbyvxo184.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6062"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NtIhn0LL+fcz7dZfvJZb+4sQnB1EeB4tBXbhGk+/ji0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 01:17:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ilbyvxo184"
+        },
+        {
+          "Name": "label",
+          "Value": "img/37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NtIhn0LL+fcz7dZfvJZb+4sQnB1EeB4tBXbhGk+/ji0="
+        }
+      ]
+    },
+    {
+      "Route": "img/37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6062"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NtIhn0LL+fcz7dZfvJZb+4sQnB1EeB4tBXbhGk+/ji0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 01:17:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NtIhn0LL+fcz7dZfvJZb+4sQnB1EeB4tBXbhGk+/ji0="
+        }
+      ]
+    },
+    {
+      "Route": "img/5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 01:11:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y="
+        }
+      ]
+    },
+    {
+      "Route": "img/5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.vm524ki7q0.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 01:11:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vm524ki7q0"
+        },
+        {
+          "Name": "label",
+          "Value": "img/5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y="
+        }
+      ]
+    },
+    {
+      "Route": "img/a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 01:12:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc="
+        }
+      ]
+    },
+    {
+      "Route": "img/a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.lipy9as2wo.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 01:12:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lipy9as2wo"
+        },
+        {
+          "Name": "label",
+          "Value": "img/a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc="
+        }
+      ]
+    },
+    {
+      "Route": "img/a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 01:08:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y="
+        }
+      ]
+    },
+    {
+      "Route": "img/a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda.vm524ki7q0.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 01:08:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vm524ki7q0"
+        },
+        {
+          "Name": "label",
+          "Value": "img/a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-B705cDaWgdcwQ+re4QiTZOprELuFnM9lFZJ62ZCOX3Y="
+        }
+      ]
+    },
+    {
+      "Route": "img/landscape-placeholder-svgrepo-com.9la8nl6uf9.svg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\landscape-placeholder-svgrepo-com.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "888"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y01EqYdFlXrZmez1SNSUrIbNZtllxvo6nt5ejTFe4HA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 26 Jan 2025 02:10:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9la8nl6uf9"
+        },
+        {
+          "Name": "label",
+          "Value": "img/landscape-placeholder-svgrepo-com.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y01EqYdFlXrZmez1SNSUrIbNZtllxvo6nt5ejTFe4HA="
+        }
+      ]
+    },
+    {
+      "Route": "img/landscape-placeholder-svgrepo-com.svg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\landscape-placeholder-svgrepo-com.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "888"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y01EqYdFlXrZmez1SNSUrIbNZtllxvo6nt5ejTFe4HA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 26 Jan 2025 02:10:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y01EqYdFlXrZmez1SNSUrIbNZtllxvo6nt5ejTFe4HA="
+        }
+      ]
+    }
+  ]
 }

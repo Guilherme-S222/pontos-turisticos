@@ -18,4 +18,8 @@
     <ProjectReference Include="..\PontosTuristicos.Infrastructure\PontosTuristicos.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwrot\img\" />
+  </ItemGroup>
+
 </Project>

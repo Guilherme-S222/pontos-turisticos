@@ -28,7 +28,6 @@ C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\obj\Debug\
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.PontosTuristicos.Api.props
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.PontosTuristicos.Api.props
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\obj\Debug\net8.0\PontosTu.391CDD18.Up2Date
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\obj\Debug\net8.0\PontosTuristicos.Api.dll
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\obj\Debug\net8.0\refint\PontosTuristicos.Api.dll
@@ -88,3 +87,6 @@ C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\bin\Debug\
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\bin\Debug\net8.0\PontosTuristicos.Api.staticwebassets.runtime.json
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

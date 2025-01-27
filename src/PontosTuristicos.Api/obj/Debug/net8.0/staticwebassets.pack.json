@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg",
+      "PackagePath": "staticwebassets\\img\\37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg",
+      "PackagePath": "staticwebassets\\img\\5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg",
+      "PackagePath": "staticwebassets\\img\\a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda.jpg",
+      "PackagePath": "staticwebassets\\img\\a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\landscape-placeholder-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\img\\landscape-placeholder-svgrepo-com.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PontosTuristicos.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PontosTuristicos.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PontosTuristicos.Api.props",
+      "PackagePath": "build\\PontosTuristicos.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PontosTuristicos.Api.props",
+      "PackagePath": "buildMultiTargeting\\PontosTuristicos.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PontosTuristicos.Api.props",
+      "PackagePath": "buildTransitive\\PontosTuristicos.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

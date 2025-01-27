@@ -1,4 +1,5 @@
-﻿using PontosTuristicos.Communication.Requests;
+﻿using Microsoft.AspNetCore.Http;
+using PontosTuristicos.Communication.Requests;
 using PontosTuristicos.Communication.Responses;
 using PontosTuristicos.Exception;
 using PontosTuristicos.Exception.ExceptionsBase;
@@ -9,9 +10,11 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.Register
 {
     public class RegisterPontoUseCase
     {
-        public ResponseShortPontoJson Execute(RequestRegisterPontoJson request)
+        public async Task<ResponseShortPontoJson> Execute(RequestRegisterPontoJson request)
         {
             Validate(request);
+
+            request.ImagePath = await SaveImage(request.Image);
 
             var dbContext = new PontosDbContext();
 
@@ -47,12 +50,38 @@ namespace PontosTuristicos.Application.UseCases.PontosTuristicos.Register
 
             var result = validator.Validate(request);
 
-            if(result.IsValid == false)
+            if (result.IsValid == false)
             {
                 var errorMessages = result.Errors.Select(error => error.ErrorMessage).ToList();
 
                 throw new ErrorOnValidationException(errorMessages);
             }
+        }
+
+        private async Task<string> SaveImage(IFormFile? image)
+        {
+            if (image == null || image.Length == 0)
+            {
+
+                return "/img/landscape-placeholder-svgrepo-com.svg";
+
+            }
+
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img");
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
+
+            var uniqueFileName = Guid.NewGuid().ToString() + "_" + image.FileName;
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await image.CopyToAsync(fileStream);
+            }
+
+            return $"/img/{uniqueFileName}";
         }
     }
 }

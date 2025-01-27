@@ -101,7 +101,7 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('registerModal')">&times;</span>
             <h2>Cadastrar Ponto Turístico</h2>
-            <form id="pontoForm" onsubmit="registerPonto(event)">
+            <form id="pontoForm" onsubmit="registerPonto(event)" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Nome:</label>
                     <input type="text" id="pontoName" autocomplete="off" required>

@@ -10,3 +10,4 @@ C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Communication\
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Communication\obj\Debug\net8.0\refint\PontosTuristicos.Communication.dll
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Communication\obj\Debug\net8.0\PontosTuristicos.Communication.pdb
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Communication\obj\Debug\net8.0\ref\PontosTuristicos.Communication.dll
+C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Communication\obj\Debug\net8.0\PontosTuristicos.Communication.csproj.AssemblyReference.cache

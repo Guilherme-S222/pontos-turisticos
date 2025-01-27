@@ -1,3 +1,8 @@
+// Definindo porta para as requisções na API
+const portaHttp = 'http://localhost:5294';
+const portaHttps = 'https://localhost:7076';
+
+
 // Variáveis globais para paginação
 let currentPage = 1;
 let allPontos = [];
@@ -28,7 +33,7 @@ function createCard(ponto) {
 
    pontoElement.innerHTML = `
       <div class='spot-image'>
-         <img src=${ponto.imagePath} alt="Imagem do Ponto Turístico">
+         <img src="${portaHttp}${ponto.imagePath}" alt="Imagem do Ponto Turístico">
       </div>
       <div class="card-name">
          <h3>${ponto.name}</h3>
@@ -95,10 +100,11 @@ function updatePaginationControls() {
    paginationContainer.innerHTML = paginationHTML;
 }
 
+
 // Função para visualizar detalhes do ponto turistico
 async function viewDetails(pontoId) {
    try {
-      const response = await fetch(`http://localhost:5294/api/Pontos/${pontoId}`);
+      const response = await fetch(`${portaHttp}/api/Pontos/${pontoId}`);
 
       if (!response.ok) {
          throw new Error('Erro ao buscar detalhes do ponto turístico');
@@ -130,6 +136,7 @@ async function viewDetails(pontoId) {
    }
 }
 
+
 // Função para mudar de página
 function changePage(newPage) {
    const totalPages = Math.ceil(allPontos.length / itemsPerPage);
@@ -148,10 +155,11 @@ function changePage(newPage) {
 
 // ==================== Funções de requisição ====================
 
+
 // Função para recuperar todos os pontos
 async function recuperarDados() {
    try {
-      const response = await fetch('http://localhost:5294/api/Pontos');
+      const response = await fetch(`${portaHttp}/api/Pontos`);
       const data = await response.json();
 
       const spotsGrid = document.getElementById('spotsGrid');
@@ -195,7 +203,7 @@ async function searchSpots() {
          return;
       }
 
-      const response = await fetch(`http://localhost:5294/api/Pontos/${encodeURIComponent(searchTerm)}/search`);
+      const response = await fetch(`${portaHttp}/api/Pontos/${encodeURIComponent(searchTerm)}/search`);
 
       if (!response.ok) {
          if (response.status === 404) {
@@ -225,112 +233,63 @@ async function searchSpots() {
    }
 }
 
-// // Função para registrar um novo ponto turístico
-async function registerPonto(event) {
 
+// Função para registrar um novo ponto turístico
+async function registerPonto(event) {
    event.preventDefault();
 
-   const pontoData = {
-      name: document.getElementById('pontoName').value,
-      description: document.getElementById('pontoDescription').value,
-      location: document.getElementById('pontoLocation').value,
-      city: document.getElementById('pontoCity').value,
-      state: document.getElementById('pontoState').value,
-      imagePath: "img/landscape-placeholder-svgrepo-com.svg"
-   };
+   const formData = new FormData();
+   formData.append('name', document.getElementById('pontoName').value);
+   formData.append('description', document.getElementById('pontoDescription').value);
+   formData.append('location', document.getElementById('pontoLocation').value);
+   formData.append('city', document.getElementById('pontoCity').value);
+   formData.append('state', document.getElementById('pontoState').value);
 
+   const imageInput = document.getElementById('pontoImage');
+   if (imageInput.files.length > 0) {
+      formData.append('image', imageInput.files[0]);
+      formData.append('ImagePath', 'img');
+   }
 
    try {
       const response = await fetch('http://localhost:5294/api/Pontos', {
          method: 'POST',
-         headers: {
-            'Content-Type': 'application/json'
-         },
-         body: JSON.stringify(pontoData)
+         body: formData
       });
 
-      if (!response.ok) {
-         const errorData = await response.json();
-         throw new Error(errorData.messages?.join(', ') || 'Erro ao registrar ponto turístico');
+      console.log('Status da resposta:', response.status);
+
+      // Verifica se a resposta é bem-sucedida (status 2xx)
+      if (response.ok) {
+         // Fecha o modal
+         closeModal('registerModal');
+
+         // Limpa o formulário
+         document.getElementById('pontoForm').reset();
+
+         // Atualiza a lista de pontos
+         await recuperarDados();
+
+         // Mostra mensagem de sucesso
+         alert('Ponto turístico registrado com sucesso!');
+      } else {
+         // Se a resposta não for bem-sucedida, tenta ler o corpo da resposta para obter detalhes do erro
+         const errorData = await response.json().catch(() => null);
+         throw new Error(errorData?.messages?.join(', ') || 'Erro ao registrar ponto turístico');
       }
-
-      // Fecha o modal
-      closeModal('registerModal');
-
-      // Limpa o formulário
-      document.getElementById('pontoForm').reset();
-
-      // Atualiza a lista de pontos
-      await recuperarDados();
-
-      // Mostra mensagem de sucesso
-      alert('Ponto turístico registrado com sucesso!');
-
    } catch (error) {
       console.error('Erro:', error);
       alert('Erro ao registrar ponto turístico: ' + error.message);
    }
 }
 
-// async function registerPonto(event) {
-
-//    event.preventDefault();
-
-//    const formData = new FormData();
-//    formData.append('name', document.getElementById('pontoName').value);
-//    formData.append('description', document.getElementById('pontoDescription').value);
-//    formData.append('location', document.getElementById('pontoLocation').value);
-//    formData.append('city', document.getElementById('pontoCity').value);
-//    formData.append('state', document.getElementById('pontoState').value);
-
-//    const imagePath = document.getElementById('pontoImage').files[0];
-
-//    if (imagePath) {
-//       formData.append('imagePath', imagePath);
-//    } else {
-//       formData.append('imagePath', 'img/landscape-placeholder-svgrepo-com.svg');
-//    }
-
-//    try {
-
-//       const response = await fetch('http://localhost:5294/api/Pontos', {
-//          method: 'POST',
-//          headers: {
-//             'Content-Type': 'application/json'
-//          },
-//          body: formData
-//       });
-
-//       if (!response.ok) {
-//          const errorData = await response.json();
-//          throw new Error(errorData.messages?.join(', ') || 'Erro ao registrar ponto turístico');
-//       }
-
-//       // Fecha o modal
-//       closeModal('registerModal');
-
-//       // Limpa o formulário
-//       document.getElementById('pontoForm').reset();
-
-//       // Atualiza a lista de pontos
-//       await recuperarDados();
-
-//       // Mostra mensagem de sucesso
-//       alert('Ponto turístico registrado com sucesso!');
-
-//    } catch (error) {
-//       console.error('Erro:', error);
-//       alert('Erro ao registrar ponto turístico: ' + error.message);
-//    }
-
-// }
 
 async function deletePonto(pontoId) {
    const confirmation = confirm("Tem certeza que deseja excluir este ponto turístico?");
    if (!confirmation) return;
 
    try {
-      const response = await fetch(`http://localhost:5294/api/Pontos/${pontoId}`, {
+      const response = await fetch(`${portaHttp}/api/Pontos/${pontoId}`, {
          method: 'DELETE',
       });
 
@@ -348,7 +307,6 @@ async function deletePonto(pontoId) {
       alert('Erro ao excluir ponto turístico: ' + error.message);
    }
 }
-
 
 
 // ==================== Funções auxiliares ====================
@@ -378,6 +336,7 @@ window.onclick = function (event) {
       event.target.style.display = 'none';
    }
 }
+
 
 // ==================== Funções para buscar cidade na api do IBGE ===================
 const estados = [

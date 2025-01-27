@@ -16,11 +16,11 @@ namespace pontos_turisticos.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(ResponseShortPontoJson), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status400BadRequest)]
-        public IActionResult Register([FromBody] RequestRegisterPontoJson request)
+        public async Task<IActionResult> Register([FromForm] RequestRegisterPontoJson request)
         {
             var useCase = new RegisterPontoUseCase();
 
-            var response = useCase.Execute(request);
+            var response = await useCase.Execute(request);
 
             return Created(string.Empty, response);
         }
@@ -74,5 +74,5 @@ namespace pontos_turisticos.Controllers
 
             return NoContent();
         }
-    } 
+    }
 }
