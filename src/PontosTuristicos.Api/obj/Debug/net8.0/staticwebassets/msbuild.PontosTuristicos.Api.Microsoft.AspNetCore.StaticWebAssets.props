@@ -1,5 +1,23 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PontosTuristicos.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PontosTuristicos.Api</BasePath>
+      <RelativePath>img/0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lipy9as2wo</Fingerprint>
+      <Integrity>rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>PontosTuristicos.Api</SourceId>

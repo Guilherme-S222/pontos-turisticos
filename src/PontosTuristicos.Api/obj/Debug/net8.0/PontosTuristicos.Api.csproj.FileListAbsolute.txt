@@ -89,4 +89,3 @@ C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\bin\Debug\
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\bin\Debug\net8.0\PontosTuristicos.Api.staticwebassets.runtime.json
-C:\Users\Guilherme\Desktop\pontos-turisticos\src\PontosTuristicos.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

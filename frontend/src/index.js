@@ -252,7 +252,7 @@ async function registerPonto(event) {
    }
 
    try {
-      const response = await fetch('http://localhost:5294/api/Pontos', {
+      const response = await fetch(`${portaHttp}/api/Pontos`, {
          method: 'POST',
          body: formData
       });

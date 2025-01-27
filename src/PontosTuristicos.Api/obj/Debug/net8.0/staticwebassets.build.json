@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ha5bpYD0gGKWsG2Y8mkVXREMoHz6PGSnK0QLowYpCYM=",
+  "Hash": "KTzKXTM7qVZJAuk0xmxh4ANf5oHLIC3gnYvJm/bJD5w=",
   "Source": "PontosTuristicos.Api",
   "BasePath": "_content/PontosTuristicos.Api",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor.jpg",
+      "SourceId": "PontosTuristicos.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\",
+      "BasePath": "_content/PontosTuristicos.Api",
+      "RelativePath": "img/0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lipy9as2wo",
+      "Integrity": "rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor.jpg"
+    },
     {
       "Identity": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg",
       "SourceId": "PontosTuristicos.Api",
@@ -123,6 +144,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "img/0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 01:57:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc="
+        }
+      ]
+    },
+    {
+      "Route": "img/0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor.lipy9as2wo.jpg",
+      "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 01:57:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lipy9as2wo"
+        },
+        {
+          "Name": "label",
+          "Value": "img/0b232c2c-b067-4c18-a170-a28347748cd4_cristo-redentor.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rQacf9l9Gk8MI7+bPSHE7l43peWPjYkhM64nv6TvVuc="
+        }
+      ]
+    },
     {
       "Route": "img/37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.ilbyvxo184.jpg",
       "AssetFile": "C:\\Users\\Guilherme\\Desktop\\pontos-turisticos\\src\\PontosTuristicos.Api\\wwwroot\\img\\37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg",

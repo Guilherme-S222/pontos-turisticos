@@ -1,5 +1,0 @@
-wwwroot\img\37870950-eda5-4dcf-a152-a3b08a8d1ab7_pao-acucar-342423123.jpg
-wwwroot\img\5da1f42d-cff2-4aa2-bc22-9e4e09d576de_lacerda.jpg
-wwwroot\img\a44c7e82-165b-4f3e-a94a-90bb72b8f8c5_cristo-redentor.jpg
-wwwroot\img\a5fbd29a-bd91-4779-9f70-ac055aed75bb_lacerda.jpg
-wwwroot\img\landscape-placeholder-svgrepo-com.svg
