@@ -55,7 +55,6 @@ Antes de iniciar, certifique-se de ter os seguintes itens instalados:
 ```
 optionsBuilder.UseSqlite("Data Source=INSERIR-O-CAMINHO-DO-BANCO-DE-DADOS-AQUI/PontosDatabase.db");
 ```
-
 - **2.4.** Para encontrar o caminho correto do banco de dados (**PontosDatabase.db**):
 
   - Localize o arquivo do banco de dados na pasta do projeto.
@@ -65,7 +64,11 @@ optionsBuilder.UseSqlite("Data Source=INSERIR-O-CAMINHO-DO-BANCO-DE-DADOS-AQUI/P
     ```
   - Clique com o botão direito no arquivo e selecione **Propriedades**.
   - Copie o valor do campo **Local**, que será algo como:
-    - C:/Users/seu-usuario/pontos-turisticos-main/PontosDatabase.db.
+    - `C:\\Users\\seu-usuario\\pontos-turisticos-main\\PontosDatabase.db`
+  - 📍Lembrando que no Linux/MacOS o caminho com `/` (barra simples) é o padrão e funciona normalmente.
+      - Por exemplo: `C:/Users/seu-usuario/pontos-turisticos-main/PontosDatabase.db`
+  - 📍No Windows, as barras invertidas `\\` são o padrão para caminhos de arquivo.
+      - Por exemplo: `C:\\Users\\seu-usuario\\pontos-turisticos-main\\PontosDatabase.db`
   - Salve o arquivo 📄**PontosDbContext.cs**
 
 ### **3. Executar a API**
